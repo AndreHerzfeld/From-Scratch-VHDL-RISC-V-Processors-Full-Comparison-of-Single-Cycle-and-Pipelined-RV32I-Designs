@@ -1,0 +1,271 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+# Date created = 07:59:03  August 14, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		RV32i_pipeline_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY rv32_pipeline
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "07:59:03  AUGUST 14, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE verificador_we.vhd
+set_global_assignment -name VHDL_FILE tb_rv32_pipeline.vhd
+set_global_assignment -name VHDL_FILE shift_left1.vhd
+set_global_assignment -name VHDL_FILE rv32_pipeline.vhd
+set_global_assignment -name VHDL_FILE Rom_32bit.vhd
+set_global_assignment -name VHDL_FILE RegisterFile.vhd
+set_global_assignment -name VHDL_FILE register32_with_reset.vhd
+set_global_assignment -name VHDL_FILE register32.vhd
+set_global_assignment -name VHDL_FILE register_32.vhd
+set_global_assignment -name VHDL_FILE reg32x32.vhd
+set_global_assignment -name VHDL_FILE RAM.vhd
+set_global_assignment -name VHDL_FILE mux32x1_32bit.vhd
+set_global_assignment -name VHDL_FILE mux16x1_32bit.vhd
+set_global_assignment -name VHDL_FILE mux8x1_32bit.vhd
+set_global_assignment -name VHDL_FILE mux4x1_32bit.vhd
+set_global_assignment -name VHDL_FILE mux2x1_32bit.vhd
+set_global_assignment -name VHDL_FILE mux2x1_1bit.vhd
+set_global_assignment -name VHDL_FILE mux_pkg.vhd
+set_global_assignment -name VHDL_FILE MainController.vhd
+set_global_assignment -name VHDL_FILE ImmediateGenerator.vhd
+set_global_assignment -name VHDL_FILE Full_Adder.vhd
+set_global_assignment -name VHDL_FILE F_WRITEBACK.vhd
+set_global_assignment -name VHDL_FILE F_WB.vhd
+set_global_assignment -name VHDL_FILE F_MEM.vhd
+set_global_assignment -name VHDL_FILE F_IF.vhd
+set_global_assignment -name VHDL_FILE F_EXECUTE.vhd
+set_global_assignment -name VHDL_FILE F_EXE.vhd
+set_global_assignment -name VHDL_FILE F_DECODE.vhd
+set_global_assignment -name VHDL_FILE decoder_mux.vhd
+set_global_assignment -name VHDL_FILE decoder.vhd
+set_global_assignment -name VHDL_FILE controlador_ula.vhd
+set_global_assignment -name VHDL_FILE B_MEMWB.vhd
+set_global_assignment -name VHDL_FILE B_IFID.vhd
+set_global_assignment -name VHDL_FILE B_IDEX.vhd
+set_global_assignment -name VHDL_FILE B_EXMEM.vhd
+set_global_assignment -name VHDL_FILE ALU_Control.vhd
+set_global_assignment -name VHDL_FILE ALU.vhd
+set_global_assignment -name VHDL_FILE addr_0.vhd
+set_global_assignment -name VHDL_FILE Adder_32bit.vhd
+set_global_assignment -name VHDL_FILE a_xor_b.vhd
+set_global_assignment -name VHDL_FILE a_or_b.vhd
+set_global_assignment -name VHDL_FILE a_and_b.vhd
+set_instance_assignment -name PRESERVE_REGISTER ON -to comb
+set_instance_assignment -name PRESERVE_REGISTER ON -to i_CLK
+set_instance_assignment -name PRESERVE_REGISTER ON -to i_RESET
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_alu_op_id
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_alu_op_idex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_alu_result_ex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_alu_result_exmem
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_alu_result_mem
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_alu_result_memwb
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_funct3_id
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_funct3_idex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_funct7_id
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_funct7_idex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_imm_id
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_imm_idex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_instruction_if
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_instruction_ifid
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_mem_result_mem
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_mem_result_memwb
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_pc_exmem
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_pc_id
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_pc_idex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_pc_if
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_pc_ifid
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_pc_offset_mem
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_pc_offset_result_ex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rd1_id
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rd1_idex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rd2_ex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rd2_exmem
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rd2_id
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rd2_idex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rd_ex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_RD_exmem
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rd_id
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rd_idex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_RD_mem
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_RD_memwb
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rd_wb
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rs1_id
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rs1_idex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rs2_id
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_rs2_idex
+set_instance_assignment -name PRESERVE_REGISTER ON -to w_wd_wb
+set_instance_assignment -name PRESERVE_REGISTER ON -to o_ALU_Res
+set_instance_assignment -name PRESERVE_REGISTER ON -to o_PC_IF
+set_instance_assignment -name PRESERVE_REGISTER ON -to o_RAM_Output
+set_instance_assignment -name PRESERVE_REGISTER ON -to o_RD2
+set_instance_assignment -name PRESERVE_REGISTER ON -to "F_EXE:u_EXE"
+set_instance_assignment -name PRESERVE_REGISTER ON -to "B_EXMEM:u_EXMEM"
+set_instance_assignment -name PRESERVE_REGISTER ON -to "F_DECODE:u_ID"
+set_instance_assignment -name PRESERVE_REGISTER ON -to "B_IDEX:u_ID_EX"
+set_instance_assignment -name PRESERVE_REGISTER ON -to "F_IF:u_IF"
+set_instance_assignment -name PRESERVE_REGISTER ON -to "B_IFID:u_IF_ID"
+set_instance_assignment -name PRESERVE_REGISTER ON -to "F_MEM:u_MEM"
+set_instance_assignment -name PRESERVE_REGISTER ON -to "B_MEMWB:u_MEMWB"
+set_instance_assignment -name PRESERVE_REGISTER ON -to "F_WB:u_WB"
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to comb
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to i_CLK
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to i_RESET
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_alu_op_id
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_alu_op_idex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_alu_result_ex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_alu_result_exmem
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_alu_result_mem
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_alu_result_memwb
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_funct3_id
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_funct3_idex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_funct7_id
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_funct7_idex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_imm_id
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_imm_idex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_instruction_if
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_instruction_ifid
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_mem_result_mem
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_mem_result_memwb
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_pc_exmem
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_pc_id
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_pc_idex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_pc_if
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_pc_ifid
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_pc_offset_mem
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_pc_offset_result_ex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rd1_id
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rd1_idex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rd2_ex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rd2_exmem
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rd2_id
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rd2_idex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rd_ex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_RD_exmem
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rd_id
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rd_idex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_RD_mem
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_RD_memwb
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rd_wb
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rs1_id
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rs1_idex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rs2_id
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_rs2_idex
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to w_wd_wb
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to o_ALU_Res
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to o_PC_IF
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to o_RAM_Output
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to o_RD2
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to "F_EXE:u_EXE"
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to "B_EXMEM:u_EXMEM"
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to "F_DECODE:u_ID"
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to "B_IDEX:u_ID_EX"
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to "F_IF:u_IF"
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to "B_IFID:u_IF_ID"
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to "F_MEM:u_MEM"
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to "B_MEMWB:u_MEMWB"
+set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to "F_WB:u_WB"
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to comb
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to i_CLK
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to i_RESET
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_alu_op_id
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_alu_op_idex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_alu_result_ex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_alu_result_exmem
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_alu_result_mem
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_alu_result_memwb
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_funct3_id
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_funct3_idex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_funct7_id
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_funct7_idex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_imm_id
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_imm_idex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_instruction_if
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_instruction_ifid
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_mem_result_mem
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_mem_result_memwb
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_pc_exmem
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_pc_id
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_pc_idex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_pc_if
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_pc_ifid
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_pc_offset_mem
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_pc_offset_result_ex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rd1_id
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rd1_idex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rd2_ex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rd2_exmem
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rd2_id
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rd2_idex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rd_ex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_RD_exmem
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rd_id
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rd_idex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_RD_mem
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_RD_memwb
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rd_wb
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rs1_id
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rs1_idex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rs2_id
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_rs2_idex
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to w_wd_wb
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to o_ALU_Res
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to o_PC_IF
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to o_RAM_Output
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to o_RD2
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to "F_EXE:u_EXE"
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to "B_EXMEM:u_EXMEM"
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to "F_DECODE:u_ID"
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to "B_IDEX:u_ID_EX"
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to "F_IF:u_IF"
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to "B_IFID:u_IF_ID"
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to "F_MEM:u_MEM"
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to "B_MEMWB:u_MEMWB"
+set_instance_assignment -name DONT_MERGE_REGISTER ON -to "F_WB:u_WB"
+set_global_assignment -name DISABLE_REGISTER_MERGING_ACROSS_HIERARCHIES ON
+set_global_assignment -name REMOVE_DUPLICATE_REGISTERS OFF
+set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE AREA"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
